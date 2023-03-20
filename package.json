@@ -1,0 +1,22 @@
+{
+  "name": "1_ca_cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tredgate@github.com/tredgate/1_CA_Cypress.git"
+  },
+  "author": "Petr Fifka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tredgate/1_CA_Cypress/issues"
+  },
+  "homepage": "https://github.com/tredgate/1_CA_Cypress#readme",
+  "devDependencies": {
+    "cypress": "^12.8.0"
+  }
+}
