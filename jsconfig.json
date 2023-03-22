@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
-    "esModuleInterop": true
+    "module": "es6",
+    "esModuleInterop": true,
+    "types": ["cypress"]
   },
   "exclude": ["node_modules"]
 }
