@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/tredgate/1_CA_Cypress#readme",
   "devDependencies": {
-    "cypress": "^12.8.0"
+    "cypress": "^12.8.1"
   }
 }
