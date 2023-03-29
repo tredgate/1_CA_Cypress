@@ -1,4 +1,5 @@
 import { HomePage } from "./home_page";
+import { LostPasswordPage } from "./lost_password_page";
 
 export class LoginPage {
   constructor() {
@@ -6,6 +7,7 @@ export class LoginPage {
     this.usernameInput = "#username";
     this.passwordInput = "#password";
     this.loginButton = ".btn";
+    this.lostPasswordAnchor = "#forget_password";
   }
 
   openPmtool() {
@@ -26,5 +28,10 @@ export class LoginPage {
   clickLogin() {
     cy.get(this.loginButton).click();
     return new HomePage();
+  }
+
+  clickLostPassword() {
+    cy.get(this.lostPasswordAnchor).click();
+    return new LostPasswordPage();
   }
 }
