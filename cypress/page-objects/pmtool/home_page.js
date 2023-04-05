@@ -6,6 +6,9 @@ export class HomePage {
     this.profileAnchor = "#user_dropdown > .dropdown-toggle";
     this.logoutAnchor = "#logout > a";
     this.projectsMenuAnchor = "#Projects a";
+    this.welcomePageHeader = "#welcome-page-header";
+
+    cy.get(this.welcomePageHeader).should("be.visible");
   }
 
   clickProfile() {
