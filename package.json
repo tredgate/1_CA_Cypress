@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tredgate/1_CA_Cypress#readme",
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
     "cypress": "^12.8.1"
   }
 }

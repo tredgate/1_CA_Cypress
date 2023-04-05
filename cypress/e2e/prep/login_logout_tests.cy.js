@@ -1,23 +1,16 @@
-import { HomePage } from "../../prep/page-objects/prep_homepage";
 import { LoginPage } from "../../prep/page-objects/prep_login_page";
 
 describe("Login and Logout Tests", () => {
-  it("Login to pmtool", () => {
-    let pmtoolLoginPage = new LoginPage();
-    pmtoolLoginPage.openPmtool();
-    pmtoolLoginPage.typeUsername("fifka_petr");
-    pmtoolLoginPage.typePassword("Tredgate2023");
-    pmtoolLoginPage.clickLoginButton();
+  beforeEach(() => {
+    new LoginPage().openPmtool();
   });
 
-  it("Login and Logout test", () => {
-    let pmtoolLoginPage = new LoginPage();
-    let homepage = new HomePage();
-    pmtoolLoginPage.openPmtool();
-    pmtoolLoginPage.typeUsername("fifka_petr");
-    pmtoolLoginPage.typePassword("Tredgate2023");
-    pmtoolLoginPage.clickLoginButton();
-    homepage.clickProfile();
-    homepage.clicklogout();
+  it("Login to pmtool using Fluent API test", () => {
+    new LoginPage()
+      .typeUsername("fifka_petr")
+      .typePassword("Tredgate2023")
+      .clickLogin()
+      .clickProfile()
+      .clickLogout();
   });
 });

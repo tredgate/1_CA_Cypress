@@ -1,3 +1,4 @@
+import { LostPasswordPage } from "../../page-objects/pmtool/lost_password_page";
 import { HomePage } from "./prep_homepage";
 
 export class LoginPage {
@@ -6,6 +7,9 @@ export class LoginPage {
     this.usernameInput = "#username";
     this.passwordInput = "#password";
     this.loginButton = ".btn";
+    this.lostPasswordAnchor = "#forget_password";
+    this.pageHeader = "h3.form-title";
+    this.alertDiv = ".alert-danger";
   }
 
   openPmtool() {
@@ -23,8 +27,23 @@ export class LoginPage {
     return this;
   }
 
-  clickLoginButton() {
+  clickLogin() {
     cy.get(this.loginButton).click();
     return new HomePage();
+  }
+
+  clickLostPassword() {
+    cy.get(this.lostPasswordAnchor).click();
+    return new LostPasswordPage();
+  }
+
+  pageHeaderHasText(headerText) {
+    cy.get(this.pageHeader).should("have.text", headerText);
+    return this;
+  }
+
+  alertNotExist() {
+    cy.get(this.alertDiv).should("not.exist");
+    return this;
   }
 }
