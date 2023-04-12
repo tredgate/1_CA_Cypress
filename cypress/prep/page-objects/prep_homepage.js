@@ -1,23 +1,12 @@
-import { ProjectsPage } from "../../page-objects/pmtool/projects_page";
-import { LoginPage } from "./prep_login_page";
+import { HeaderSection } from "./header_section";
+import { ProjectsPage } from "./projects_page";
 
-export class HomePage {
+export class HomePage extends HeaderSection {
   constructor() {
-    this.profileAnchor = "#user_dropdown > .dropdown-toggle";
-    this.logoutAnchor = "#logout > a";
+    super();
     this.projectsMenuAnchor = "#Projects a";
     this.welcomePageHeader = "#welcome-page-header";
     cy.get(this.welcomePageHeader).should("be.visible");
-  }
-
-  clickProfile() {
-    cy.get(this.profileAnchor).click();
-    return this;
-  }
-
-  clickLogout() {
-    cy.get(this.logoutAnchor).click();
-    return new LoginPage();
   }
 
   clickProjects() {
