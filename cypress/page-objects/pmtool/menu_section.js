@@ -1,3 +1,5 @@
+import { ReportsPage } from "./reports_page";
+
 export class MenuSection {
   constructor() {
     this.projectsMenuAnchor = "#Projects a";
