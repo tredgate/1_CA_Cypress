@@ -16,13 +16,15 @@ describe("Self-exercise - create new project, task", () => {
     let taskName = `FIFKA_TASK_${randomNumber}`;
     cy.fixture("test.txt", { encoding: null }).as("projectAttachFile");
 
+    let date = new Date();
+
     new ProjectsPage()
       .clickNewProjectButton()
       .selectPriority("High")
       .selectStatus("Open")
       .typeProjectName(projectName)
       .attachFile()
-      .fillStartDate("2023-04-19")
+      .fillStartDate(date.toLocaleDateString("en-CA")) //format: yyyy-MM-dd
       .clickSaveButton()
       .clickAddTask()
       .selectType("Change")
@@ -30,6 +32,13 @@ describe("Self-exercise - create new project, task", () => {
       .typeTaskName(taskName)
       .assignToPetr()
       .clickSave()
-      .clickProjects();
+      .clickProjects()
+      .searchProject(projectName)
+      .priorityHasText("High")
+      .statusHasText("Open")
+      .projectNameHasText(projectName)
+      .dateAddedContainsText(date.toLocaleDateString("en-GB")) //format: dd/MM/yyyy
+      .startDateHasText(date.toLocaleDateString("en-GB")) //format: dd/MM/yyyy
+      .createdByHasText("Petr Fifka");
   });
 });
