@@ -7,8 +7,8 @@ describe("Fluent Login tests", () => {
 
   it("Login to pmtool using Fluent API test", () => {
     new LoginPage()
-      .typeUsername("fifka_petr")
-      .typePassword("Tredgate2023")
+      .typeUsername(Cypress.env("pmtool_username"))
+      .typePassword(Cypress.env("pmtool_password"))
       .clickLogin()
       .clickProfile()
       .clickLogout();
