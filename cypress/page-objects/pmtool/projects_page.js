@@ -3,7 +3,7 @@ import { NewProjectWindowPage } from "./new_project_window_page";
 
 export class ProjectsPage extends HeaderSection {
   constructor() {
-    super();
+    super("module=items/items&path=21");
     this.addNewProjectButton = 'button[test_id="Add Project"]';
     this.page_title = "h3.page-title";
     this.search_file = 'input[test_id="search_input"]';

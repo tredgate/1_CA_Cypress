@@ -46,4 +46,14 @@ export class LoginPage {
     cy.get(this.alertDiv).should("not.exist");
     return this;
   }
+
+  usernameIsVisible() {
+    cy.get(this.usernameInput).should("be.visible");
+    return this;
+  }
+
+  usernameHasValue(value) {
+    cy.get(this.usernameInput).should("be.visible");
+    return this;
+  }
 }
