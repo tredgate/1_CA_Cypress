@@ -49,15 +49,32 @@ export class LoginPage {
     );
   }
 
+  usernameIsVisible() {
+    cy.get(this.usernameInput).should("be.visible");
+    return this;
+  }
+
+  usernameHasValue(usernameValue) {
+    cy.get(this.usernameInput).should("have.value", usernameValue);
+    return this;
+  }
+
   passwordHasPlaceholder(placeholderValue) {
     cy.get(this.passwordInput).should(
       "have.attr",
       "placeholder",
       placeholderValue
     );
+    return this;
+  }
+
+  passwordIsVisible() {
+    cy.get(this.passwordInput).should("be.visible");
+    return this;
   }
 
   logoIsVisible() {
     cy.get(this.logoImg).should("be.visible");
+    return this;
   }
 }

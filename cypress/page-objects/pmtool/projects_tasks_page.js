@@ -2,8 +2,8 @@ import { HeaderSection } from "./header_sections";
 import { NewTaskWindowPage } from "./new_task_window_page";
 
 export class ProjectsTasksPage extends HeaderSection {
-  constructor() {
-    super();
+  constructor(projectId = "") {
+    super(`module=items/items&path=21-${projectId}/22`);
     this.addNewTaskButton = 'button[test_id="Add Task"]';
   }
 
