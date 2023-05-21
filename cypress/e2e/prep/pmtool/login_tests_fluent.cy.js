@@ -8,5 +8,15 @@ describe("Fluent Login tests", () => {
       .clickLoginButton()
       .clickProfile()
       .clicklogout();
+
   });
+
+  it("Test lost password functionality", () => {
+    new LoginPage()
+      .clickLostPassword()
+      .typeEmail("")
+      .clickSubmitButton()
+      .verifyErrorMessage("Email is required");
+  });
+
 });
