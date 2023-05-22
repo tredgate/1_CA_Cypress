@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tredgate/1_CA_Cypress#readme",
   "devDependencies": {
     "@cypress/xpath": "^2.0.3",
+    "@faker-js/faker": "^8.0.1",
     "cypress": "^12.8.1"
   },
   "dependencies": {
