@@ -3,7 +3,7 @@
     "_id": "123456",
     "userId": 1,
     "accountId": "10001",
-    "balance": 0,
+    "balance": 25000,
     "transactionLimits": {
       "dailyLimit": 10000,
       "monthlyLimit": 50000,
