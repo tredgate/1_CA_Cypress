@@ -1,4 +1,4 @@
-import { HeaderSection } from "./header_sections";
+import { HeaderSection } from "./header_section";
 import { NewTaskWindowPage } from "./new_task_window_page";
 
 export class ProjectsTasksPage extends HeaderSection {
