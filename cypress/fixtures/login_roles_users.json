@@ -1,0 +1,30 @@
+[
+    {
+        "username": "manager_petfif_final",
+        "password": "Tredgate2023",
+        "first_name": "Manager",
+        "last_name": "Fifka Test",
+        "role": "manager"
+    },
+    {
+        "username": "admin_petfif_final",
+        "password": "Tredgate2023",
+        "first_name": "Admin",
+        "last_name": "Fifka Test",
+        "role": "admin"
+    },
+    {
+        "username": "dev_petfif_final",
+        "password": "Tredgate2023",
+        "first_name": "Developer",
+        "last_name": "Fifka Test",
+        "role": "developer"
+    },
+    {
+        "username": "client_petfif_final",
+        "password": "Tredgate2023",
+        "first_name": "Client",
+        "last_name": "Fifka Test",
+        "role": "client"
+    }
+]

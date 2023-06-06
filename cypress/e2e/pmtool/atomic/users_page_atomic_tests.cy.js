@@ -13,21 +13,21 @@ describe("Users page atomic tests", () => {
 
   context("Title tests", () => {
     it("Title is visible", () => {
-      new UsersPage().pageTitleIsVisible();
+      new UsersPage().page_title.isVisible();
     });
 
     it("Title has text", () => {
-      new UsersPage().pageTitleHasText("Users");
+      new UsersPage().page_title.hasText("Users");
     });
   });
 
   context("Add user button tests", () => {
     it("Add user button is visible", () => {
-      new UsersPage().addUserButtonIsVisible();
+      new UsersPage().addUserButton.isVisible();
     });
 
     it("Add user button has text", () => {
-      new UsersPage().addUserButtonHasText("Add User");
+      new UsersPage().addUserButton.hasText("Add User");
     });
   });
 });
