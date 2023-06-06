@@ -27,6 +27,12 @@ export class ProjectsPage extends HeaderSection {
     this.filtersActualConfigurationDiv = ".filters-preview-box.is-active-1";
     this.importButton = "a[test_id='import_button']";
     this.withSelectedDropdown = "button[test_id='with_selected_dropdown']";
+    this.loaderDiv = '.data_listing_processing';
+  }
+
+  waitForLoaderVanish() {
+    cy.get('.data_listing_processing').should("not.exist");
+    return this;
   }
 
   searchInputIsVisible() {
