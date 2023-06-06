@@ -1,6 +1,6 @@
 import { LoginPage } from "../../page-objects/pmtool/login_page";
 
-describe("Login page tests", () => {
+describe("Login page tests", { tags: "@smoke" }, () => {
   beforeEach(() => {
     new LoginPage().openPmtool();
   });

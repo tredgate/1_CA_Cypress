@@ -10,7 +10,7 @@ describe('Lost password tests', () => {
             .clickSubmit();
     });
 
-    it('Open lost password page and return to homepage', () => {
+    it('Open lost password page and return to homepage', { tags: '@smoke'}, () => {
         new LoginPage()
             .openPmtool()
             .clickLostPassword()
