@@ -1,0 +1,17 @@
+[
+    {
+        "role": "Manager",
+        "username_prefix": "manager_",
+        "password": "Tredgate2023"
+    },
+    {
+        "role": "Client",
+        "username_prefix": "client_",
+        "password": "Tredgate2023"
+    },
+    {
+        "role": "Developer",
+        "username_prefix": "developer_",
+        "password": "Tredgate2023"
+    }
+]

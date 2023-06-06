@@ -6,6 +6,7 @@ export class HeaderSection extends MenuSection {
     super(path);
     this.profileAnchor = "#user_dropdown > .dropdown-toggle";
     this.logoutAnchor = "#logout > a";
+    this.usernameSpan = ".username";
   }
 
   clickProfile() {
@@ -16,5 +17,9 @@ export class HeaderSection extends MenuSection {
   clickLogout() {
     cy.get(this.logoutAnchor).click();
     return new LoginPage();
+  }
+
+  userNameHasFullName(fullName) {
+    cy.get(this.usernameSpan).should('contain.text', fullName);
   }
 }

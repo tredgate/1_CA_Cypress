@@ -10,6 +10,13 @@ export class NewProjectWindowPage {
     this.statusSelect = 'div[data-testid="Status"] select';
     this.startDateInput = 'div[data-testid="Start Date"] input';
     this.attachFileInput = "input[type='file'][data-msg-accept=' ']";
+    this.descriptionIframe = ".cke_wysiwyg_frame"
+    this.progressBar = ".progress-bar"
+  }
+
+  waitForProgressBarVanish() {
+    cy.get(this.progressBar).should("not.exist");
+    return this;
   }
 
   typeProjectName(projectName) {
@@ -43,5 +50,14 @@ export class NewProjectWindowPage {
   clickSaveButton() {
     cy.get(this.saveButton).click();
     return new ProjectsTasksPage();
+  }
+
+  typeDescription(description) {
+    cy.get(this.descriptionIframe).then(($iframe) => {
+      const body = $iframe.contents().find("body");
+      cy.wrap(body).as("iframe");
+    });
+    cy.get("@iframe").type(description);
+    return this;
   }
 }

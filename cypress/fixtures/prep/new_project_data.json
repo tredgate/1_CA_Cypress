@@ -28,11 +28,10 @@
         "start_date": "today"
     },
     {
-        "name_prefix": "cancelled_High_yesterday_",
+        "name_prefix": "canceled_High_yesterday_",
         "status": "Canceled",
         "priority": "High",
         "description": "Canceled High Priority Project Started Yesterday",
         "start_date": "yesterday"
     }
 ]
-
